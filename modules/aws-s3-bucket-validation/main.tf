@@ -18,7 +18,10 @@ resource "aws_s3_bucket_cors_configuration" "validation_bucket_cors_configuratio
   cors_rule {
     allowed_headers = ["*"]
     allowed_methods = ["PUT"]
-    allowed_origins = ["https://localhost:3000/"]
+    allowed_origins = [
+      "http://localhost:3000", 
+      "https://dev-front-end-pdf-2-qa.vercel.app"
+    ]
     max_age_seconds = 3000
   }
 }

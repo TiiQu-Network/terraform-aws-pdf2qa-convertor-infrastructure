@@ -16,9 +16,19 @@ module "vpc" {
   source = "./modules/aws-vpc"
 }
 
-# module "aws-s3-bucket-validation" {
-#   source = "./modules/aws-s3-bucket-validation"
-# }
-# module "aws-s3-bucket-processing" {
-#   source = "./modules/aws-s3-bucket-processing"
-# }
+module "aws-s3-bucket-validation" {
+  source = "./modules/aws-s3-bucket-validation"
+}
+
+# NOTE: Access Denied error even though user has full access to S3 bucket, so commented out for now
+module "aws-s3-bucket-processing" {
+  source = "./modules/aws-s3-bucket-processing"
+}
+
+module "aws-s3-bucket-completed" {
+  source = "./modules/aws-s3-bucket-completed"
+}
+
+module "aws-s3-bucket-quarantine" {
+  source = "./modules/aws-s3-bucket-quarantine"
+}

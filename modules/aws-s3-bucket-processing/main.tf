@@ -21,10 +21,11 @@ data "aws_iam_policy_document" "processing_bucket_policy_document" {
   statement {
     principals {
       type        = "AWS"
-      identifiers = [var.lambda_processing_service_principle]
+      identifiers = ["109607957842"]
     }
 
     actions = [
+      "s3:PutObject",
       "s3:GetObject",
       "s3:DeleteObject",
     ]
