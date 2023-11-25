@@ -13,7 +13,7 @@ resource "aws_sqs_queue" "pdf2qa_convertor_processing_dl_queue" {
 }
 
 resource "aws_sns_topic" "pdf2qa_convertor_file_status" {
-    name = "pdf2qa-convertor-file-status"
+    name = "pdf2qa-convertor-file-processing-status"
 }
 
 # subscribe our SQS queue to the SNS topic
