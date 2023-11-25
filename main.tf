@@ -20,7 +20,6 @@ module "aws-s3-bucket-validation" {
   source = "./modules/aws-s3-bucket-validation"
 }
 
-# NOTE: Access Denied error even though user has full access to S3 bucket, so commented out for now
 module "aws-s3-bucket-processing" {
   source = "./modules/aws-s3-bucket-processing"
 }
@@ -31,4 +30,12 @@ module "aws-s3-bucket-completed" {
 
 module "aws-s3-bucket-quarantine" {
   source = "./modules/aws-s3-bucket-quarantine"
+}
+
+module "aws-sns-and-sqs-validation" {
+  source = "./modules/aws-sns-and-sqs-validation"
+}
+
+module "aws-sns-and-sqs-processing" {
+  source = "./modules/aws-sns-and-sqs-processing"
 }
